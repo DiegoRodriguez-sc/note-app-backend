@@ -24,8 +24,11 @@ const validarJWT = async(req = request, res = response, next) =>{
       msg:"token no valido"
     })
     }
-    const {_id, __v, password, ...user} = usuario;
+    const {_id, name, email, ...user} = usuario;
     user.uid = _id;
+    user.name = name;
+    user.email= email;
+    
     req.usuario = user;
     
     next();

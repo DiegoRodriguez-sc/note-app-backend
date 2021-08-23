@@ -69,7 +69,7 @@ const revalidarTWJ = async (req = request, res = response) => {
  
   res.json({
     status:true,
-    _id,
+    uid,
     name,
     token,
   });
